@@ -1,6 +1,6 @@
 using System;
 
-namespace ProjetoTec.Models
+namespace Biblioteca.Models
 {
     public class ErrorViewModel
     {

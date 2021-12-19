@@ -1,3 +1,7 @@
+using Biblioteca.Models.Contracts.Repositories;
+using Biblioteca.Models.Contracts.Services;
+using Biblioteca.Models.Repositories;
+using Biblioteca.Models.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -9,7 +13,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ProjetoTec
+namespace Biblioteca
 {
     public class Startup
     {
@@ -24,6 +28,9 @@ namespace ProjetoTec
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+
+            services.AddScoped<IVeiculoRepository, VeiculoRepository>();
+            services.AddScoped<IVeiculoService, VeiculoService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

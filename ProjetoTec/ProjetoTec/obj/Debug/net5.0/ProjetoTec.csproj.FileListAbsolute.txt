@@ -37,3 +37,9 @@ C:\Users\andre\Documents\Visual Studio\MVC\projeto-tecnomotor\ProjetoTec\Projeto
 C:\Users\andre\Documents\Visual Studio\MVC\projeto-tecnomotor\ProjetoTec\ProjetoTec\obj\Debug\net5.0\ProjetoTec.pdb
 C:\Users\andre\Documents\Visual Studio\MVC\projeto-tecnomotor\ProjetoTec\ProjetoTec\obj\Debug\net5.0\ProjetoTec.genruntimeconfig.cache
 C:\Users\andre\Documents\Visual Studio\MVC\projeto-tecnomotor\ProjetoTec\ProjetoTec\obj\Debug\net5.0\ProjetoTec.csproj.CopyComplete
+C:\Users\andre\Documents\Visual Studio\MVC\projeto-tecnomotor\ProjetoTec\ProjetoTec\obj\Debug\net5.0\Razor\Views\Veiculo\Create.cshtml.g.cs
+C:\Users\andre\Documents\Visual Studio\MVC\projeto-tecnomotor\ProjetoTec\ProjetoTec\obj\Debug\net5.0\Razor\Views\Veiculo\Delete.cshtml.g.cs
+C:\Users\andre\Documents\Visual Studio\MVC\projeto-tecnomotor\ProjetoTec\ProjetoTec\obj\Debug\net5.0\Razor\Views\Veiculo\Details.cshtml.g.cs
+C:\Users\andre\Documents\Visual Studio\MVC\projeto-tecnomotor\ProjetoTec\ProjetoTec\obj\Debug\net5.0\Razor\Views\Veiculo\Edit.cshtml.g.cs
+C:\Users\andre\Documents\Visual Studio\MVC\projeto-tecnomotor\ProjetoTec\ProjetoTec\obj\Debug\net5.0\Razor\Views\Veiculo\Index.cshtml.g.cs
+C:\Users\andre\Documents\Visual Studio\MVC\projeto-tecnomotor\ProjetoTec\ProjetoTec\obj\Debug\net5.0\Razor\Views\Veiculo\List.cshtml.g.cs
