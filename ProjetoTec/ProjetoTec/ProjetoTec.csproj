@@ -10,4 +10,11 @@
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.14.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Models\Interfaces\Services\" />
+    <Folder Include="Models\Interfaces\Repositories\" />
+    <Folder Include="Models\Services\" />
+    <Folder Include="Models\Repositories\" />
+  </ItemGroup>
+
 </Project>
