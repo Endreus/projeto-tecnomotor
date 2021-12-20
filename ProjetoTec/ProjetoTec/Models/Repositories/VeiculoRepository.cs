@@ -33,7 +33,7 @@ namespace Biblioteca.Models.Repositories
         public List<VeiculoDto> Listar()
         {
             var veiculos = ContentDataFake.Veiculos; //acessando os dados do banco fake
-            return veiculos.OrderBy(p => p.Montadora).ToList(); // retornando os dados do banco fake
+            return veiculos.OrderBy(p => p.Montadora.Nome).ToList(); // retornando os dados do banco fake
 
         }
 

@@ -8,28 +8,48 @@ namespace Biblioteca.Models.Repositories
     public static class ContentDataFake
     {
         public static List<VeiculoDto> Veiculos;
+        public static List<MontadoraDto> Montadoras;
 
         static ContentDataFake() 
         {
-            Veiculos = new List<VeiculoDto>(); //foi criado um banco de dados fake para testar como vai ficar, até introduzir o banco de dados real.
+            Veiculos = new List<VeiculoDto>();//foi criado um banco de dados fake para testar como vai ficar, até introduzir o banco de dados real.
+            Montadoras = new List<MontadoraDto>();
             InitializeData();
+
         }
 
         private static void InitializeData() //acrescentado alguns veiculos para teste
         {
-            var veiculo = new VeiculoDto("Ka", "Ford");
+            var montadora = new MontadoraDto("Ford");
+            Montadoras.Add(montadora);
+
+
+
+            var veiculo = new VeiculoDto("Ka", montadora);
             Veiculos.Add(veiculo);
 
-            veiculo = new VeiculoDto("Corolla", "Toyota");
+            montadora = new MontadoraDto("Toyota");
+            Montadoras.Add(montadora);
+
+            veiculo = new VeiculoDto("Corolla", montadora);
             Veiculos.Add(veiculo);
 
-            veiculo = new VeiculoDto("Fusca", "Volkswagen");
+            montadora = new MontadoraDto("Volkswagen");
+            Montadoras.Add(montadora);
+
+            veiculo = new VeiculoDto("Fusca", montadora);
             Veiculos.Add(veiculo);
 
-            veiculo = new VeiculoDto("Prisma", "Chevrolet");
+            montadora = new MontadoraDto("Chevrolet");
+            Montadoras.Add(montadora);
+
+            veiculo = new VeiculoDto("Prisma", montadora);
             Veiculos.Add(veiculo);
 
-            veiculo = new VeiculoDto("Uno", "Fiat");
+            montadora = new MontadoraDto("Fiat");
+            Montadoras.Add(montadora);
+
+            veiculo = new VeiculoDto("Uno", montadora);
             Veiculos.Add(veiculo);
         }
 

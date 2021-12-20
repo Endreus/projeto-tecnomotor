@@ -7,7 +7,8 @@
 <h1>Lista de Veículos</h1>
 
 <p>
-    <a asp-action="Create">Cadastrar Veículo</a>
+    <a class = "btn btn-primary" asp-controller = "Veiculo" asp-action = "Create" role = "button">Cadastrar veículo</a>
+
 </p>
 <table class="table">
     <thead>
@@ -20,7 +21,7 @@
             </th>
 
              <th>
-                @Html.DisplayNameFor(model => model.Montadora)
+                @Html.DisplayNameFor(model => model.Montadora.Nome)
             </th>
            
             <th></th>
@@ -37,11 +38,11 @@
             </td>
 
             <td>
-                @Html.DisplayFor(modelItem => item.Montadora)
+                @Html.DisplayFor(modelItem => item.Montadora.Nome)
             </td>
             
             <td>
-                @Html.ActionLink("Atualizar", "Edit", new { id=item.Id }) |
+                @Html.ActionLink("Editar", "Edit", new { id=item.Id }) |
                 @Html.ActionLink("Informações", "Details", new { id=item.Id }) |
                 @Html.ActionLink("Excluir", "Delete", new { id=item.Id })
             </td>

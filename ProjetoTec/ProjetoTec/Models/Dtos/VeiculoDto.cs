@@ -7,7 +7,7 @@ namespace Biblioteca.Models.Dtos
     {
 
         public string Nome { get; set; }
-        public string Montadora { get; set;}
+        public MontadoraDto Montadora { get; set;}
 
 
         public VeiculoDto() //construtor sem parametros para criação de veículos nos formulários.
@@ -16,13 +16,13 @@ namespace Biblioteca.Models.Dtos
         }
     
 
-        public VeiculoDto(string id, string nome, string montadora) //construtor que gera o id e chama o construtor seguinte
+        public VeiculoDto(string id, string nome, MontadoraDto montadora) //construtor que gera o id e chama o construtor seguinte
             :this(nome, montadora)
         {
             this.Id = id;
         }
 
-        public VeiculoDto(string nome, string montadora) // construtor que pega as outras informações menos o id
+        public VeiculoDto(string nome, MontadoraDto montadora) // construtor que pega as outras informações menos o id
         {
             this.Nome = nome;
             this.Montadora = montadora;

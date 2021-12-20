@@ -8,6 +8,10 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using ProjetoTec.Models.Contracts.Repositories;
+using ProjetoTec.Models.Contracts.Services;
+using ProjetoTec.Models.Repositories;
+using ProjetoTec.Models.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -29,6 +33,8 @@ namespace Biblioteca
         {
             services.AddControllersWithViews();
 
+            services.AddScoped<IMontadoraService, MontadoraService>();
+            services.AddScoped<IMontadoraRepository, MontadoraRepository>();
             services.AddScoped<IVeiculoRepository, VeiculoRepository>();
             services.AddScoped<IVeiculoService, VeiculoService>();
         }
