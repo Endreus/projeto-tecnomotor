@@ -38,8 +38,8 @@ namespace Biblioteca.Controllers
         }
         [HttpPost] //referencia dizendo que é algo que ira escrever, salvar
         [ValidateAntiForgeryToken] // sistema de segurança para proteção de CSRF. ataque malicioso.
-        public IActionResult Create([Bind("Nome","Autor","Editora")]VeiculoDto veiculo) // tem o mesmo nome Create para tem uma assinatura diferente (possui parâmetros) por isso consigo usar o mesmo nome.
-        {                            // Bind irá colocar os itens no BD do LivroDto nos campos Nome, Autor e Editora
+        public IActionResult Create([Bind("Nome","Montadora")]VeiculoDto veiculo) // tem o mesmo nome Create para tem uma assinatura diferente (possui parâmetros) por isso consigo usar o mesmo nome.
+        {                            // Bind irá colocar os itens no BD do VeiculoDto nos campos Nome
             try
             {
                 _veiculoservice.Cadastrar(veiculo);
@@ -57,7 +57,7 @@ namespace Biblioteca.Controllers
                 return NotFound();
 
             var veiculo  = _veiculoservice.PesquisarPorID(id); // aqui seria o else
-            if(veiculo == null) // caso ele nao ache o livro ele retorna mensagem não encontrado.
+            if(veiculo == null) // caso ele nao ache o veículo ele retorna mensagem não encontrado.
                 return NotFound();
 
             return View(veiculo); 
@@ -65,7 +65,7 @@ namespace Biblioteca.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Edit([Bind("Id, Nome")]VeiculoDto veiculo)
+        public IActionResult Edit([Bind("Id, Nome, Montadora")]VeiculoDto veiculo)
         {
             if (string.IsNullOrEmpty(veiculo.Id))
                 return NotFound();
@@ -108,7 +108,7 @@ namespace Biblioteca.Controllers
 
         [HttpPost]
 
-        public IActionResult Delete([Bind("Id, Nome, Autor, Editora")]VeiculoDto veiculo)
+        public IActionResult Delete([Bind("Id, Nome, Montadora")]VeiculoDto veiculo)
         {
             _veiculoservice.Excluir(veiculo.Id); //ele pega o id e exclui
             return RedirectToAction("List"); //a exclusão estando tudo certo ele volta para a tela dos veiculos.

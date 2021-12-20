@@ -14,6 +14,7 @@ namespace Biblioteca.Models.Repositories
             ContentDataFake.Veiculos.Remove(objPesquisa); //aqui ele remove o objeto de pesquisa
 
             objPesquisa.Nome = veiculo.Nome; //aqui pego os dados do obj de pesquisa que desejo atualizar
+            objPesquisa.Montadora = veiculo.Montadora;
 
             Cadastrar(objPesquisa); // aqui pega os dados e cadastra.
         }
@@ -32,14 +33,14 @@ namespace Biblioteca.Models.Repositories
         public List<VeiculoDto> Listar()
         {
             var veiculos = ContentDataFake.Veiculos; //acessando os dados do banco fake
-            return veiculos.OrderBy(p => p.Nome).ToList(); // retornando os dados do banco fake
+            return veiculos.OrderBy(p => p.Montadora).ToList(); // retornando os dados do banco fake
 
         }
 
         public VeiculoDto PesquisarPorId(string id)
         {
-            var livro = ContentDataFake.Veiculos.FirstOrDefault(p => p.Id == id);
-            return livro;
+            var veiculo = ContentDataFake.Veiculos.FirstOrDefault(p => p.Id == id);
+            return veiculo;
         }
 
     }

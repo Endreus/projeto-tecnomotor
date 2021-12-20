@@ -23,6 +23,13 @@
                 <input asp-for="Nome" class="form-control" />
                 <span asp-validation-for="Nome" class="text-danger"></span>
             </div>
+
+            <div class="form-group">
+                <label asp-for="Montadora" class="control-label"></label>
+                <input asp-for="Montadora" class="form-control" />
+                <span asp-validation-for="Montadora" class="text-danger"></span>
+            </div>
+
             <div class="form-group">
                 <input type="submit" value="Atualizar" class="btn btn-primary" />
             </div>
@@ -31,6 +38,6 @@
 </div>
 
 <div>
-    <a asp-action="List">Cancelar</a>
+    <a class = "btn btn-secondary" asp-controller = "Veiculo" asp-action = "List" role = "button">Voltar</a>
 </div>
 

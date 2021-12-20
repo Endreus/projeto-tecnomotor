@@ -24,11 +24,18 @@
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.Nome)
         </dd>
+
+         <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Montadora)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Montadora)
+        </dd>
         
     </dl>
     
     <form asp-action="Delete">
         <input type="submit" value="Excluir" class="btn btn-danger" /> |
-        <a asp-action="List">Cancelar</a>
+        <a class = "btn btn-secondary" asp-controller = "Veiculo" asp-action = "List" role = "button">Voltar</a>
     </form>
 </div>

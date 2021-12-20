@@ -1,4 +1,5 @@
 ﻿using Biblioteca.Models.Dtos;
+using ProjetoTec.Models.Dtos;
 using System;
 using System.Collections.Generic;
 
@@ -16,20 +17,21 @@ namespace Biblioteca.Models.Repositories
 
         private static void InitializeData() //acrescentado alguns veiculos para teste
         {
-            var veiculo = new VeiculoDto("Ford Ka");
+            var veiculo = new VeiculoDto("Ka", "Ford");
             Veiculos.Add(veiculo);
 
-            veiculo = new VeiculoDto("Corolla");
+            veiculo = new VeiculoDto("Corolla", "Toyota");
             Veiculos.Add(veiculo);
 
-            veiculo = new VeiculoDto("Fusca");
+            veiculo = new VeiculoDto("Fusca", "Volkswagen");
             Veiculos.Add(veiculo);
 
-            veiculo = new VeiculoDto("Prisma");
+            veiculo = new VeiculoDto("Prisma", "Chevrolet");
             Veiculos.Add(veiculo);
 
-            veiculo = new VeiculoDto("Uno");
+            veiculo = new VeiculoDto("Uno", "Fiat");
             Veiculos.Add(veiculo);
         }
+
     }
 }

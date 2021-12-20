@@ -3,11 +3,11 @@
 @{
     ViewData["Title"] = "List";
 }
-
+<div class = "text-center">
 <h1>Lista de Veículos</h1>
 
 <p>
-    <a asp-action="Create">Cadastrar Véiculo</a>
+    <a asp-action="Create">Cadastrar Veículo</a>
 </p>
 <table class="table">
     <thead>
@@ -17,6 +17,10 @@
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Nome)
+            </th>
+
+             <th>
+                @Html.DisplayNameFor(model => model.Montadora)
             </th>
            
             <th></th>
@@ -31,6 +35,10 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Nome)
             </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Montadora)
+            </td>
             
             <td>
                 @Html.ActionLink("Atualizar", "Edit", new { id=item.Id }) |
@@ -38,6 +46,8 @@
                 @Html.ActionLink("Excluir", "Delete", new { id=item.Id })
             </td>
         </tr>
+      
 }
     </tbody>
 </table>
+  </div>
