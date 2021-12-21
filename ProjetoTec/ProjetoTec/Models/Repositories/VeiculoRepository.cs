@@ -14,7 +14,6 @@ namespace Biblioteca.Models.Repositories
             ContentDataFake.Veiculos.Remove(objPesquisa); //aqui ele remove o objeto de pesquisa
 
             objPesquisa.Nome = veiculo.Nome; //aqui pego os dados do obj de pesquisa que desejo atualizar
-            objPesquisa.Montadora = veiculo.Montadora;
 
             Cadastrar(objPesquisa); // aqui pega os dados e cadastra.
         }

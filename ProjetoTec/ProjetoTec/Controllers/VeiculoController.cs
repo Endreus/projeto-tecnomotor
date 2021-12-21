@@ -74,18 +74,26 @@ namespace Biblioteca.Controllers
             if(veiculo == null) // caso ele nao ache o veículo ele retorna mensagem não encontrado.
                 return NotFound();
 
-            return View(veiculo); 
+            var montadoras = _montadoraService.Listar(); //seleciona a lista já inserida de Montadoras
+            var list = montadoras.Select(montadora => new SelectListItem { Value = montadora.Id, Text = montadora.Nome }); //seleciono os campos que serão buscados.
+            ViewBag.Montadoras = list;
+            return View(veiculo);
+
+            //return View(veiculo); 
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Edit(VeiculoDto veiculo)
+        public IActionResult Edit(VeiculoViewModel veiculoViewModel)
         {
-            if (string.IsNullOrEmpty(veiculo.Id))
+            if (string.IsNullOrEmpty(veiculoViewModel.Id))
                 return NotFound();
 
             try
             {
+                var veiculo = new VeiculoDto();
+                veiculo.Nome = veiculoViewModel.Nome;
+                veiculo.Montadora = _montadoraService.PesquisarPorId(veiculoViewModel.Montadora);
                 _veiculoService.Atualizar(veiculo);
                 return RedirectToAction("List");
             }

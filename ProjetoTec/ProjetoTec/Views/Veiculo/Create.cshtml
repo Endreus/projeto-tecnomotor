@@ -25,7 +25,7 @@
 
             <div class="form-group">
                 <label asp-for="Montadora" class="control-label"></label>
-                @Html.DropDownListFor( model => model.Montadora,(IEnumerable<SelectListItem>)ViewBag.Montadoras, "-- Select Montadora.Nome --");
+                @Html.DropDownListFor( model => model.Montadora,(IEnumerable<SelectListItem>)ViewBag.Montadoras, "Selecione a Montadora")
                 <span asp-validation-for="Montadora" class="text-danger"></span>
             </div>
 
