@@ -1,9 +1,9 @@
 # projeto-tecnomotor
-Projeto destinado ao processo seletivo da tecnomotor
-no início criei as duas classes Dto Véiculo e Montadora, porém resolvi focar primeiramente em uma das classes e depois a outra.
-Através da separação de camadas MVC separei cada item no seu devido lugar conforme as boas práticas da programação.
-criei as interfaces IVeiculoService e IVéiculoRepository e suas classes de implementação de código.
-criei uma Entidade chamada de EntidadeBase para facilitar a geração de Id, onde ele gera o id automaticamente usando o Guid.
+- Projeto destinado ao processo seletivo da tecnomotor
+- no início criei as duas classes Dto Véiculo e Montadora, porém resolvi focar primeiramente em uma das classes e depois a outra.
+- Através da separação de camadas MVC separei cada item no seu devido lugar conforme as boas práticas da programação.
+- criei as interfaces IVeiculoService e IVéiculoRepository e suas classes de implementação de código.
+- criei uma Entidade chamada de EntidadeBase para facilitar a geração de Id, onde ele gera o id automaticamente usando o Guid.
 criei uma nova Controller para poder listar os veículos chamada de VeiculoCOntroller e onde vamos chamar os métodos CRUD.
 através da Controller e utilizando a ferramenta Razor criei uma pagina Véiculo.
 Criada a página List para listar todos os véiculos.
