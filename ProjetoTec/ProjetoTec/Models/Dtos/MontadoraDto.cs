@@ -7,6 +7,11 @@ namespace ProjetoTec.Models.Dtos
 
         public string Nome { get; set; }
 
+        public MontadoraDto()
+        {
+
+        }
+
         public MontadoraDto(string id, string nome) //construtor que gera o id e chama o construtor seguinte
             : this(nome)
         {

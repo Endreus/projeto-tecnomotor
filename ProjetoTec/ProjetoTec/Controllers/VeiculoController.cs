@@ -77,9 +77,13 @@ namespace Biblioteca.Controllers
             var montadoras = _montadoraService.Listar(); //seleciona a lista já inserida de Montadoras
             var list = montadoras.Select(montadora => new SelectListItem { Value = montadora.Id, Text = montadora.Nome }); //seleciono os campos que serão buscados.
             ViewBag.Montadoras = list;
-            return View(veiculo);
 
-            //return View(veiculo); 
+            var veiculoViewModel = new VeiculoViewModel();
+            veiculoViewModel.Id = veiculo.Id;
+            veiculoViewModel.Nome = veiculo.Nome;
+            veiculoViewModel.Montadora = veiculo.Montadora.Id;
+
+            return View(veiculoViewModel);
         }
 
         [HttpPost]
@@ -88,10 +92,12 @@ namespace Biblioteca.Controllers
         {
             if (string.IsNullOrEmpty(veiculoViewModel.Id))
                 return NotFound();
+            if (string.IsNullOrEmpty(veiculoViewModel.Montadora))
+                return NotFound();
 
             try
             {
-                var veiculo = new VeiculoDto();
+                var veiculo = _veiculoService.PesquisarPorID(veiculoViewModel.Id);
                 veiculo.Nome = veiculoViewModel.Nome;
                 veiculo.Montadora = _montadoraService.PesquisarPorId(veiculoViewModel.Montadora);
                 _veiculoService.Atualizar(veiculo);

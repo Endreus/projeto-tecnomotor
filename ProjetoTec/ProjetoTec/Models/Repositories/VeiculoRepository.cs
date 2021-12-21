@@ -3,6 +3,7 @@ using Biblioteca.Models.Dtos;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using ProjetoTec.Models.Dtos;
 
 namespace Biblioteca.Models.Repositories
 {
