@@ -13,3 +13,6 @@
 - Cadastrar instanciado com sucesso.
 - A mesma forma foi com os métodos de Editar, Detalhes e Exclusão, onde crio a página e instancio os métodos para cada, e todos foram implementados com sucesso.
 - Com o CRUD feito, crio a classe Montadora para trabalhar com ela.
+- Foi utilizado o Razor para criação de todas as views da aplicação.
+- para executar o programa é necessário o Visual Studio, e estou utilizando o .Net 5.0 e o ISS Express.
+- Aqui estão os links onde estão a explicação dos códigos e o programa funcionando: https://www.youtube.com/watch?v=qBW9WV_rb1c , https://www.youtube.com/watch?v=4IpSv8ZDXwI&t=617s
